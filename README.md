@@ -1,6 +1,6 @@
 # Roman Numeral Converter
 
-## Approach
+## Approach
 
 Although the test asked for a `class`, it was unnecessary so I made a conversion `function`.
 
@@ -18,12 +18,12 @@ We then compose our return values in an object based on whether the unit is 9, 5
 
 This creates an array of strings which is reversed and joined for the final solution.
 
-## Testing
+## Testing
 
 There is a small test suite using Jest as a test runner alongside the file containing the conversion function.
 If you would like to run it, please install dependencies using `yarn`, and then run `yarn test`.
 
-## Assumptions Made and Caveats
+## Assumptions Made and Caveats
 
 Firstly, I assumed that you wouldn’t mind if this was a function rather than a class.
 I also assumed that the function should not support values greater than 3999.
