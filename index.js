@@ -8,11 +8,11 @@ function convertUnitValue(num, placeValue) {
   const lookup = [["I", "V", "X"], ["X", "L", "C"], ["C", "D", "M"], ["M"]];
   const [one, five, ten] = lookup[placeValue];
   const numerals = {
-    "9": `${one}${ten}`,
-    "5": five,
-    "4": `${one}${five}`,
     "0-3": one.repeat(num),
-    "6-8": `${five}${one.repeat(num % 5)}`
+    "4": `${one}${five}`,
+    "5": five,
+    "6-8": `${five}${one.repeat(num % 5)}`,
+    "9": `${one}${ten}`
   };
   return numerals[numerals[num] ? num : num < 4 ? "0-3" : "6-8"];
 }
