@@ -25,7 +25,7 @@ This creates an array of strings which is reversed and joined for the final solu
 
 ## Testing
 
-I'm using Jest as a test runner. Please find tests in index.spec.js. Some are programatically generated based on place value conversion. There are also some tests for numbers with a range of values.
+I'm using Jest as a test runner. Please find tests in `index.spec.js`. Some are programatically generated based on place value conversion. There are also some tests for numbers with a range of values.
 
 ## Assumptions Made and Caveats
 
