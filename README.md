@@ -1,5 +1,10 @@
 # Roman Numeral Converter
 
+## Local Install
+- Clone the repo - `git clone https://github.com/christoph-phillips/roman_numeral_converter.git`
+- Install dependences `yarn`
+- Run the test suite `yarn test`
+
 ## Approach
 
 Although the test asked for a `class`, it was unnecessary so I made a conversion `function`.
