@@ -25,8 +25,7 @@ This creates an array of strings which is reversed and joined for the final solu
 
 ## Testing
 
-There is a small test suite using Jest as a test runner alongside the file containing the conversion function.
-If you would like to run it, please install dependencies using `yarn`, and then run `yarn test`.
+I'm using Jest as a test runner. Please find tests in index.spec.js. Some are programatically generated based on place value conversion. There are also some tests for numbers with a range of values.
 
 ## Assumptions Made and Caveats
 
