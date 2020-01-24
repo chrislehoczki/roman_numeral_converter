@@ -40,7 +40,7 @@ describe("Roman numeral parser", () => {
         expect(convertRomanNumeral((i + 1) * 1000)).toEqual(numeral))
     );
   });
-  describe("Smoke test range of values", () => {
+  describe("Range of values", () => {
     const tests = [
       [68, "LXVIII"],
       [649, "DCXLIX"],
