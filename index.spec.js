@@ -12,35 +12,35 @@ describe("Roman numeral parser", () => {
       expect(() => convertRomanNumeral("A String")).toThrow(typeError);
     });
   });
-  describe("Place value 1", () => {
+  describe("Handles 10^0 cases", () => {
     const tests = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
     tests.forEach((numeral, i) =>
       it(`Expect ${i + 1} to equal ${numeral}`, () =>
         expect(convertRomanNumeral(i + 1)).toEqual(numeral))
     );
   });
-  describe("Place value 10", () => {
+  describe("Handles 10^1 cases", () => {
     const tests = ["X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"];
     tests.forEach((numeral, i) =>
       it(`Expect ${(i + 1) * 10} to equal ${numeral}`, () =>
         expect(convertRomanNumeral((i + 1) * 10)).toEqual(numeral))
     );
   });
-  describe("Place value 100", () => {
+  describe("Handles 10^2 cases", () => {
     const tests = ["C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"];
     tests.forEach((numeral, i) =>
       it(`Expect ${(i + 1) * 100} to equal ${numeral}`, () =>
         expect(convertRomanNumeral((i + 1) * 100)).toEqual(numeral))
     );
   });
-  describe("Place value 1000", () => {
+  describe("Handles 10^3 cases", () => {
     const tests = ["M", "MM", "MMM"];
     tests.forEach((numeral, i) =>
       it(`Expect ${(i + 1) * 1000} to equal ${numeral}`, () =>
         expect(convertRomanNumeral((i + 1) * 1000)).toEqual(numeral))
     );
   });
-  describe("Range of values", () => {
+  describe("Handles range of values", () => {
     const tests = [
       [68, "LXVIII"],
       [649, "DCXLIX"],

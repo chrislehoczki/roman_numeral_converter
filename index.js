@@ -3,19 +3,19 @@ export const inputError = new Error(
 );
 export const typeError = new TypeError("Input provided was not a number");
 
-const convertValueToNumeral = (num, exponent) => {
+const convertValueToNumeral = (val, exponent) => {
   const baseTenNumerals = [
     ["I", "V", "X"],
     ["X", "L", "C"],
     ["C", "D", "M"],
-    ["M"]
+    ["M", null, null]
   ];
   const [one, five, ten] = baseTenNumerals[exponent];
-  if (num < 4) return one.repeat(num);
-  if (num === 4) return `${one}${five}`;
-  if (num === 5) return five;
-  if (num > 5 && num < 9) return `${five}${one.repeat(num % 5)}`;
-  if (num === 9) return `${one}${ten}`;
+  if (val < 4) return one.repeat(val);
+  if (val === 4) return `${one}${five}`;
+  if (val === 5) return five;
+  if (val > 5 && val < 9) return `${five}${one.repeat(val % 5)}`;
+  if (val === 9) return `${one}${ten}`;
 };
 
 export const convertRomanNumeral = val => {
