@@ -1,12 +1,8 @@
-export const inputError = new Error(
-  "Input provided was not between 1 and 3999"
-);
-export const typeError = new TypeError("Input provided was not a number");
-
-export class RomanNumeralGenerator {
+export default class RomanNumeralGenerator {
   generate(val) {
-    if (isNaN(val)) throw typeError;
-    if (val < 1 || val > 3999) throw inputError;
+    if (isNaN(val)) throw new TypeError("Input provided was not a number");
+    if (val < 1 || val > 3999)
+      throw new Error("Input provided was not between 1 and 3999");
     return val
       .toString()
       .split("")

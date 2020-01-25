@@ -1,17 +1,23 @@
-import { RomanNumeralGenerator, inputError, typeError } from "./index";
+import RomanNumeralGenerator from "./index";
 
 const numeralGenerator = new RomanNumeralGenerator();
 
 describe("RomanNumeralGenerator", () => {
   describe("Input checks", () => {
     it("Throws an error when input is less than 1", () => {
-      expect(() => numeralGenerator.generate(0)).toThrow(inputError);
+      expect(() => numeralGenerator.generate(0)).toThrow(
+        "Input provided was not between 1 and 3999"
+      );
     });
     it("Throws an error when input is greater than 3999", () => {
-      expect(() => numeralGenerator.generate(4000)).toThrow(inputError);
+      expect(() => numeralGenerator.generate(4000)).toThrow(
+        "Input provided was not between 1 and 3999"
+      );
     });
     it("Throws an error when input is not a number", () => {
-      expect(() => numeralGenerator.generate("A String")).toThrow(typeError);
+      expect(() => numeralGenerator.generate("A String")).toThrow(
+        "Input provided was not a number"
+      );
     });
   });
   describe("Handles 10^0 cases", () => {
