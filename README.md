@@ -12,7 +12,7 @@ Firstly the input is checked that it is a number, and that its value is between 
 
 The input value is converted to a string, split, converted to numbers, and reversed. We can then convert each unit easily.
 
-The `convertValueToNumeral` method is called on each item with the value and the base10 exponent (in this case the array index).
+The `convertDigitToNumeral` method is called on each item with the value and the base10 exponent (in this case the array index).
 
 This method has a lookup called `baseTenNumerals` so we can find the equivalent roman numeral for one, five, and ten for the given exponent.
 
@@ -32,6 +32,6 @@ Some are programatically generated.
 
 I assumed that the generator should not support values greater than 3999.
 
-However, I wanted to make sure the generator would be extendable to include the values 5000, 10000, 50000, 100000 e.t.c. if need be. You could simply add those supported values into the lookup inside `convertValueToNumeral` method.
+However, I wanted to make sure the generator would be extendable to include the values 5000, 10000, 50000, 100000 e.t.c. if need be. You could simply add those supported values into the lookup inside `convertDigitToNumeral` method.
 
 One caveat is that the file is written in ES6 with ES Module syntax. This means the test runner must use Babel to run the test suite.

@@ -8,11 +8,11 @@ export default class RomanNumeralGenerator {
       .split("")
       .map(num => +num)
       .reverse()
-      .map(this.convertValueToNumeral)
+      .map(this.convertDigitToNumeral)
       .reverse()
       .join("");
   }
-  convertValueToNumeral(val, exponent) {
+  convertDigitToNumeral(digit, exponent) {
     const baseTenNumerals = [
       ["I", "V", "X"],
       ["X", "L", "C"],
@@ -20,10 +20,10 @@ export default class RomanNumeralGenerator {
       ["M", null, null]
     ];
     const [one, five, ten] = baseTenNumerals[exponent];
-    if (val < 4) return one.repeat(val);
-    if (val === 4) return `${one}${five}`;
-    if (val === 5) return five;
-    if (val > 5 && val < 9) return `${five}${one.repeat(val % 5)}`;
-    if (val === 9) return `${one}${ten}`;
+    if (digit < 4) return one.repeat(digit);
+    if (digit === 4) return `${one}${five}`;
+    if (digit === 5) return five;
+    if (digit > 5 && digit < 9) return `${five}${one.repeat(digit % 5)}`;
+    if (digit === 9) return `${one}${ten}`;
   }
 }
